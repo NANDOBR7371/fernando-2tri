@@ -27,7 +27,7 @@ const perguntas = [
             },
             {
                 texto: "coruja.",
-                afirmacao: "falso"
+                falso: "falso"
             }
         ]
     },
@@ -36,7 +36,7 @@ const perguntas = [
         alternativas: [
             {
                 texto: "furto.",
-                afirmacao: "falso"
+                falso: "falso"
             },
             {
                 texto: "leque dourado",
@@ -49,7 +49,7 @@ const perguntas = [
         alternativas: [
             {
                 texto: "genichiro ashina.",
-                afirmacao: "falso"
+                falso: "falso"
             },
             {
                 texto: "ishin ashina",
@@ -66,7 +66,7 @@ const perguntas = [
             },
             {
                 texto: "lamina negra matadora de imortais",
-                afirmacao: "falso"
+                falso: "falso"
             }
         ]
     },
