@@ -23,50 +23,50 @@ const perguntas = [
         alternativas: [
             {
                 texto: "lobo",
-                afirmacao: "afirmação"
+                afirmacao: "verdadeira"
             },
             {
-                texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
+                texto: "coruja.",
+                afirmacao: "falso"
+            }
+        ]
+    },
+    {
+        enunciado: "Ok vamos lá então! Qual ferramenta prostética e responsável por retirar itens e dinheiro dos seus inimigos?",
+        alternativas: [
+            {
+                texto: "furto.",
+                afirmacao: "falso"
+            },
+            {
+                texto: "leque dourado",
                 afirmacao: "afirmação"
             }
         ]
     },
     {
-        enunciado: "Após a elaboração do trabalho escrito, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: "Qual a identidade do homen que nos da a possibilidade de aprender as habilidades do estilo Ashina?",
         alternativas: [
             {
-                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao: "afirmação"
+                texto: "genichiro ashina.",
+                afirmacao: "falso"
             },
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
+                texto: "ishin ashina",
                 afirmacao: "afirmação"
             }
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "Qual o nome da espada que Genichiro usa para tentar matar o herdeiro divino no final do jogo ",
         alternativas: [
             {
-                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
+                texto: "segunda lamina mortal",
                 afirmacao: "afirmação"
             },
             {
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao: "afirmação"
-            }
-        ]
-    },
-    {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
-        alternativas: [
-            {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao: "afirmação"
-            },
-            {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao: "afirmação"
+                texto: "lamina negra matadora de imortais",
+                afirmacao: "falso"
             }
         ]
     },
