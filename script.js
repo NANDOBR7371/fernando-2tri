@@ -6,72 +6,71 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "isso e um quizz de sekiro então você precisa ter jogado o jogo primeiro, ok?",
+        enunciado: "Isso é um quiz de Sekiro. Você precisa ter jogado o jogo primeiro, ok?",
         alternativas: [
             {
-                texto: "vamo nessa!",
-                afirmacao: "afirmação"
+                texto: "Vamo nessa!",
+                afirmacao: "verdadeiro"
             },
             {
-                texto: "vamos, sekiro!",
-                afirmacao: "afirmação"
+                texto: "Vamos, Sekiro!",
+                afirmacao: "verdadeiro"
             }
         ]
     },
     {
-        enunciado: "Vamos começar fácil. Qual e o animal que sekiro leva em seu "nome"?",
+        enunciado: "Vamos começar fácil. Qual é o animal que Sekiro leva em seu nome?",
         alternativas: [
             {
-                texto: "lobo",
-                afirmacao: "verdadeira"
+                texto: "Lobo",
+                afirmacao: "verdadeiro"
             },
             {
-                texto: "coruja.",
-                falso: "falso"
+                texto: "Coruja",
+                afirmacao: "falso"
             }
         ]
     },
     {
-        enunciado: "Ok vamos lá então! Qual ferramenta prostética e responsável por retirar itens e dinheiro dos seus inimigos?",
+        enunciado: "Qual ferramenta prostética é responsável por retirar itens e dinheiro dos seus inimigos?",
         alternativas: [
             {
-                texto: "furto.",
-                falso: "falso"
+                texto: "Furto",
+                afirmacao: "falso"
             },
             {
-                texto: "leque dourado",
-                afirmacao: "afirmação"
+                texto: "Leque dourado",
+                afirmacao: "verdadeiro"
             }
         ]
     },
     {
-        enunciado: "Qual a identidade do homen que nos da a possibilidade de aprender as habilidades do estilo Ashina?",
+        enunciado: "Qual a identidade do homem que nos dá a possibilidade de aprender as habilidades do estilo Ashina?",
         alternativas: [
             {
-                texto: "genichiro ashina.",
-                falso: "falso"
+                texto: "Genichiro Ashina",
+                afirmacao: "falso"
             },
             {
-                texto: "ishin ashina",
-                afirmacao: "afirmação"
+                texto: "Isshin Ashina",
+                afirmacao: "verdadeiro"
             }
         ]
     },
     {
-        enunciado: "Qual o nome da espada que Genichiro usa para tentar matar o herdeiro divino no final do jogo ",
+        enunciado: "Qual o nome da espada que Genichiro usa para tentar matar o herdeiro divino no final do jogo?",
         alternativas: [
             {
-                texto: "segunda lamina mortal",
-                afirmacao: "afirmação"
+                texto: "Segunda lâmina mortal",
+                afirmacao: "verdadeiro"
             },
             {
-                texto: "lamina negra matadora de imortais",
-                falso: "falso"
+                texto: "Lâmina negra matadora de imortais",
+                afirmacao: "falso"
             }
         ]
     },
 ];
-
 
 let atual = 0;
 let perguntaAtual;
@@ -84,12 +83,12 @@ function mostraPergunta() {
     }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = "";
+    caixaAlternativas.innerHTML = ""; // Limpa as alternativas antes de mostrar as novas
     mostraAlternativas();
 }
 
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas) {
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
@@ -98,16 +97,15 @@ function mostraAlternativas(){
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = opcaoSelecionada.afirmacao;
-    historiaFinal += afirmacoes + " ";
+    historiaFinal += opcaoSelecionada.afirmacao + " ";
     atual++;
     mostraPergunta();
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "Quiz de Sekiro finalizado:";
     textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
+    caixaAlternativas.innerHTML = ""; // Limpa as alternativas no final
 }
 
 mostraPergunta();
